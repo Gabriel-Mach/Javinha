@@ -18,9 +18,7 @@ public class Conta {
         System.out.println("Id = "+ this.id);
         System.out.println("Saldo = "+ this.saldo);
     }
-    public void setNm(boolean nm) {
-        this.nm = nm;
-    }
+    public void setNm(boolean nm) { this.nm = nm; }
     public boolean getNm() {
         return this.nm;
     }
