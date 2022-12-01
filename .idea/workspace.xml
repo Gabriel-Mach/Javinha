@@ -5,7 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="100384ca-81e1-4e9e-8355-2f6269174122" name="Changes" comment="javinha 2">
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioClienteLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioClienteVetor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioFuncionarioVetor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioFuuncionarioLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioPrato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioPratoLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RespósitorioPratoVetor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/FJCFException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/PJCExcepition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/javinha.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/out/production/javinha/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/out/production/javinha/Empregado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/out/production/javinha/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/cliente/CadastroCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/cliente/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/db/RepositorioCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/db/RepositorioFuncionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/db/RepositorioPedidos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/db/RepositorioPedidosLista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/db/RepositorioPedidosVetor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/exceptions/CJCException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/exceptions/CPFIExecption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/funcionario/CadastroFuncionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/funcionario/Empregado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/pedido/CadastroPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/pedido/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/pratos/CadastroPrato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/javinha/src/pratos/Prato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/Conta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/Empreg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -63,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669818339093</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="javinha 2">
+      <created>1669819502588</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669819502588</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
