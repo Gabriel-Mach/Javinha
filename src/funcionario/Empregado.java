@@ -25,7 +25,7 @@ public class Empregado {
 
     public void setEndereco(String endereco) { this.endereco = endereco; }
 
-    public String getFuncao() { return funcao; }
+    public String getFuncao(String funF) { return funcao; }
 
     public void setFuncao(String funcao) {  this.funcao = funcao; }
 

@@ -7,7 +7,6 @@ public class RepositorioClienteLista implements RepositorioCliente{
     public void cadastrar(Cliente cliente) {
 
     }
-
     @Override
     public void atualizar(String cpf, Cliente cliente) {
 

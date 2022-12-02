@@ -1,7 +1,9 @@
 import cliente.Cliente;
-import db.RepositorioPedidos;
-import db.RepositorioPedidosLista;
-import db.RepositorioPedidosVetor;
+import db.*;
+import exceptions.CPFIExecption;
+import exceptions.FJCFException;
+import funcionario.CadastroFuncionario;
+import funcionario.Empregado;
 import pedido.CadastroPedido;
 
 import java.util.Scanner;
@@ -9,53 +11,79 @@ import java.util.Scanner;
 import static java.lang.System.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FJCFException, CPFIExecption {
         RepositorioPedidos rp = new RepositorioPedidosLista();
         //RepositorioPedidos rp = new RepositorioPedidosVetor();
         CadastroPedido cadastroPedido = new CadastroPedido(rp);
+        RepositorioFuncionario rf = new RepositorioFuuncionarioLista();
+        CadastroFuncionario cadF = new CadastroFuncionario(rf);
+
+
 
         Scanner s = new Scanner(in);
 
         Cliente cli = new Cliente();
 
         out.println("Bem Vindo a Cafeteria Baby Reborn");
-        out.println("Você é:\n1- Cliente.Cliente\n2- Funcionario.Empregado");
+        out.println("Você é:\n1- Cliente\n2- Funcionario");
         int res = s.nextInt();
 
         if (res == 1){
             int r1;
             out.println("1- Cardápio\n2- Seu Pedido\n3- Finalizar pedido\n 4- Sair");
-            r1 = Integer.parseInt(s.next());
+            //r1 = Integer.parseInt(s.next());
+            r1 = s.nextInt();
             while (r1!=4) {
+                if (r1 == 1){
 
-                if (r1 == 1) {
 
                 } else if (r1 == 2) {
-                    out.println("Nome do Cliente.Cliente:");
-                    String ncl = s.next();
 
+                } else if (r1 == 3) {
 
-
-                    out.println("1- Pedir\n0- Sair");
-                    int pd = Integer.parseInt(s.nextLine());
-                    while (pd != 0) {
-                        out.println("Escolha seu pedido:");
-                        pd = s.nextInt();
-
-                    }
-
-
+                } else {
+                    out.println("Opção Inválida");
                 }
                 out.println("1- Cardápio\n2- Seu Pedido\n3- Finalizar pedido\n 4- Sair");
                 r1 = s.nextInt();
             }
 
+        } else if (res == 2){
+            int r2;
+            out.println("1- Cadasdrar novo Funcionário\n2- Cadastrar novo Prato\n3- Sair");
+            r2 = s.nextInt();
+            while (r2 != 3){
+                if (r2 == 1){
+                    out.println("Nome Funcionário:");
+                    String nmF = s.nextLine();
 
-        } else if (res == 2) {
-            out.println("1- Vendas\n2- Estoque\n 3- Sair\n");
-            int r2 = s.nextInt();
+                    out.println("CPF Funcionário");
+                    String cpfF = s.nextLine();
+
+                    out.println("Endereço do Funcionário");
+                    String endF = s.nextLine();
+
+                    out.println("Função do Empregado:");
+                    String funF = s.nextLine();
+
+                    Empregado e1 = new Empregado(nmF, cpfF, endF, funF);
+                    cadF.cadastrar(e1);
+
+                } else if (r2 == 2) {
+
+
+                } else {
+                    out.println("Opção Inválida");
+
+                }
+                out.println("1- Cadasdrar novo Funcionário\n2- Cadastrar novo Prato\n3- Sair");
+                r2 = s.nextInt();
+
+            }
+
 
         }
+
 
 
 

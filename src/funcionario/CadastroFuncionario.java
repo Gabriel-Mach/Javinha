@@ -2,7 +2,6 @@ package funcionario;
 
 
 import db.RepositorioFuncionario;
-import exceptions.CJCException;
 import exceptions.CPFIExecption;
 import exceptions.FJCFException;
 
@@ -23,4 +22,5 @@ public class CadastroFuncionario {
             func.cadastrar(funcionario);
         }
     }
+
 }
