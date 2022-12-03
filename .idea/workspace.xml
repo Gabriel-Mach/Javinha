@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="100384ca-81e1-4e9e-8355-2f6269174122" name="Changes" comment="Quase Pronto">
+    <list default="true" id="100384ca-81e1-4e9e-8355-2f6269174122" name="Changes" comment="copiar e colar tudo que termina, corno S2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/RepositorioClienteLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/RepositorioClienteLista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcionario/CadastroFuncionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcionario/CadastroFuncionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcionario/Empregado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcionario/Empregado.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669910448063</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="copiar e colar tudo que termina, corno S2">
+      <created>1670019429609</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670019429609</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +111,7 @@
     <MESSAGE value="javinha" />
     <MESSAGE value="javinha 2" />
     <MESSAGE value="Quase Pronto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quase Pronto" />
+    <MESSAGE value="copiar e colar tudo que termina, corno S2" />
+    <option name="LAST_COMMIT_MESSAGE" value="copiar e colar tudo que termina, corno S2" />
   </component>
 </project>
