@@ -68,15 +68,18 @@ public class Main {
                     cadCl.cadastrar(cli);
 
                     out.println("Pedido do Cliente");
+                    Pedido p1 = new Pedido();
                     String com = s.nextLine();
+                    p1.setItensPedido(com);
 
-                   while (com != "SAIR"){
+                   while (!com.equals("SAIR")){
                         out.println("Mais um pedido?\n Se sim escolha\n se não, escreva SAIR");
                        com = s.nextLine();
 
                    }
 
-                   Pedido p1 = new Pedido(cli);
+
+                   p1.setItensPedido(com);
 
                    cad.cadastrar(p1);
 

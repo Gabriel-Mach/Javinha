@@ -1,7 +1,6 @@
 package pedido;
 
 import cliente.Cliente;
-import pratos.Prato;
 
 import java.util.ArrayList;
 
@@ -9,14 +8,18 @@ public class Pedido {
 
     private int id;
     private Cliente cliente;
-    private ArrayList<Prato> itensPedido;
+    private ArrayList<String> itensPedido;
     private double total;
 
     public Pedido(Cliente cliente) {
         this.id = this.getId() +1;
         this.cliente = cliente;
-        this.itensPedido = new ArrayList<>();
+        this.itensPedido = new ArrayList<String>();
         this.total = 0;
+    }
+
+    public Pedido() {
+
     }
 
     public Cliente getCliente() {
@@ -27,12 +30,12 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public ArrayList<Prato> getItensPedido() {
+    public ArrayList<String> getItensPedido() {
         return itensPedido;
     }
 
-    public void setItensPedido(ArrayList<Prato> itensPedido) {
-        this.itensPedido = itensPedido;
+    public void setItensPedido(String itemPedido) {
+        this.itensPedido.add(itemPedido);
     }
 
     public double getTotal() {
