@@ -5,9 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="100384ca-81e1-4e9e-8355-2f6269174122" name="Changes" comment="copiar e colar tudo que termina, corno S2">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pedido/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pedido/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cliente/CadastroCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cliente/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioFuncionario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioPedidos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioPedidosLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/RepositorioPedidosVetor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/CJCException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/CPFIExecption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/funcionario/CadastroFuncionario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/funcionario/Empregado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pedido/CadastroPedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pedido/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pratos/CadastroPrato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pratos/Prato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/cliente/CadastroCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/cliente/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioClienteLista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioClienteVetor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioFuncionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioFuncionarioVetor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioFuuncionarioLista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioPedidos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioPedidosLista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioPedidosVetor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioPrato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RepositorioPratoLista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/db/RespositorioPratoVetor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/exceptions/CJCException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/exceptions/CPFIExecption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/exceptions/FJCFException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/exceptions/PJCExcepition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/funcionario/CadastroFuncionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/funcionario/Empregado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/pedido/CadastroPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/pedido/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/pratos/CadastroPrato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/src/pratos/Prato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javinha.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javinha.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +69,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2I2mbJ5QOnPtQJ55HvvNL10sqkG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -43,6 +87,12 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gabriel L. Machado\IdeaProjects\Projeto\Javinha" />
+      <recent name="C:\Users\Gabriel L. Machado\IdeaProjects\Projeto\Javinha\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -114,5 +164,16 @@
     <MESSAGE value="Quase Pronto" />
     <MESSAGE value="copiar e colar tudo que termina, corno S2" />
     <option name="LAST_COMMIT_MESSAGE" value="copiar e colar tudo que termina, corno S2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/db/RepositorioClienteVetor.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
