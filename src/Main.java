@@ -17,8 +17,7 @@ import static java.lang.System.*;
 public class Main {
     public static void main(String[] args) throws FJCFException, CPFIExecption, CJCException, PDDExcepition, PJCExcepition {
         //RepositorioPedidos rp = new RepositorioPedidosLista();
-        RepositorioPedidos rp = new RepositorioPedidosVetor(100);
-        CadastroPedido cad = new CadastroPedido(rp);
+
 
         RepositorioFuncionario rf = new RepositorioFuncionarioVetor(100);
         CadastroFuncionario cadF = new CadastroFuncionario(rf);
@@ -28,6 +27,9 @@ public class Main {
 
         RepositorioCliente cliL = new RepositorioClienteVetor(10);
         CadastroCliente cadCl = new CadastroCliente(cliL);
+
+        RepositorioPedidos rp = new RepositorioPedidosVetor(100);
+        CadastroPedido cad = new CadastroPedido(rp,pr);
 
 
         Scanner s = new Scanner(in);
@@ -55,10 +57,10 @@ public class Main {
                             case 2/*SEU PEDIDO*/:
                                 String nmCl, clCPF, clEnd, numCl;
                                 out.print("Nome do Cliente:");
-                                nmCl = s.nextLine();
+                                nmCl = s.next();
 
                                 out.println("CPF:");
-                                clCPF = s.nextLine();
+                                clCPF = s.next();
 
                                 out.println("Endereço:");
                                 clEnd = s.nextLine();
@@ -75,14 +77,19 @@ public class Main {
                                 String com = s.nextLine();
 
                                 p1.setItensPedido(com);
+
+                                double tt = cad.buscar(com);
+                                p1.setTotal(tt);
                                 int rt = 0;
                                 boolean ca = true;
                                 while (ca) {
+                                    out.println("Valor total: "+p1.getTotal());
                                     out.println("Mais um pedido?\n Se sim escolha\n se não, escreva sair");
                                     com = s.nextLine();
 
                                     if (!com.equals("sair")){
                                         p1.setItensPedido(com);
+                                        p1.setTotal(tt);
 
                                     }else {
                                         ca = false;
@@ -113,10 +120,10 @@ public class Main {
                     switch (r3){
                         case 1/*CADASTRAR FUNCIONARIO*/:
                             out.println("Nome Funcionário:");
-                            String nmF = s.nextLine();
+                            String nmF = s.next();
 
                             out.println("CPF Funcionário:");
-                            String cpfF = s.nextLine();
+                            String cpfF = s.next();
 
                             out.println("Endereço do Funcionário");
                             String endF = s.nextLine();
@@ -129,7 +136,7 @@ public class Main {
                             break;
                         case 2 /* CADASTRAR PRATO */:
                             out.println("Nome do Prato:");
-                            String nmp = s.nextLine();
+                            String nmp = s.next();
 
                             out.println("Preço do Prato:");
                             double prp = s.nextDouble();

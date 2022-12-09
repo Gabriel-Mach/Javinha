@@ -6,6 +6,6 @@ public interface RepositorioCliente {
 
     void cadastrar(Cliente cliente);
     void atualizar(String cpf, Cliente cliente);
-    boolean existe(String cpf);
+    Cliente existe(String cpf);
     boolean buscar(String cpf);
 }

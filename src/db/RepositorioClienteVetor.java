@@ -31,8 +31,17 @@ public class RepositorioClienteVetor implements RepositorioCliente{
     }
 
     @Override
-    public boolean existe(String cpf) {
-        return false;
+    public Cliente existe(String cpf) {
+        Cliente resp =null;
+        for (int i = 0; i < client.length; i++) {
+            if (client[i] != null && client[i].getCpf().equals(cpf)) {
+                resp = client[i];
+                break;
+            }
+
+        }
+        return resp;
+
     }
 
     @Override

@@ -1,6 +1,7 @@
 package db;
 
 import pedido.Pedido;
+import pratos.Prato;
 
 public class RepositorioPedidosVetor implements RepositorioPedidos{
     Pedido [] comanda ;
@@ -26,22 +27,13 @@ public class RepositorioPedidosVetor implements RepositorioPedidos{
     }
 
     @Override
-    public boolean existe(int id) {
-        return false;
+    public Prato existe(String nm1) {
+        return null;
     }
 
     @Override
     public boolean buscar(int id) {
-        /*boolean resp = false;
-        for (int i = 0; i<comanda.length; i++){
-            if (comanda[i] != null && comanda[i].getId()) {
-                resp = true;
-                break;
-            }
-
-        }
-        return resp;
-        */
         return false;
     }
+
 }

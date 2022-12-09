@@ -35,8 +35,16 @@ public class RespositorioPratoVetor implements RepositorioPrato{
     }
 
     @Override
-    public boolean existe(String nomePrato) {
-        return false;
+    public Prato existe(String nomePrato) {
+        Prato prec = null;
+        for (int i =0; i < insumos.length; i++){
+            if(insumos[i]!= null && nomePrato.equals(insumos[i].getNomePrato())){
+                prec = insumos[i];
+            }
+        }
+
+
+        return prec;
     }
 
     @Override

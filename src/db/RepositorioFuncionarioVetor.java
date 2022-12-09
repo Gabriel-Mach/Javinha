@@ -31,7 +31,7 @@ public class RepositorioFuncionarioVetor implements RepositorioFuncionario {
     }
 
     @Override
-    public boolean existe(String cpf) {
+    public Empregado existe(String cpf) {
         return false;
     }
 
