@@ -5,3 +5,4 @@ public class PDDExcepition extends Exception {
         super("ID do Pedido já cadastrado");
     }
 }
+/*Exceptions*/

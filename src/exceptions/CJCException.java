@@ -5,3 +5,4 @@ public class CJCException extends Exception{
         super("CPF já Cadastrado!");
     }
 }
+/*Exceptions*/

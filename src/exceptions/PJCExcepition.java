@@ -5,3 +5,4 @@ public class PJCExcepition extends Exception{
         super("Prato já cadastrado!");
     }
 }
+/*Exceptions*/

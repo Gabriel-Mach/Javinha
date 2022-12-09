@@ -5,3 +5,4 @@ public class CPFIExecption extends Exception {
         super("CPF errado!");
     }
 }
+/*Exceptions*/

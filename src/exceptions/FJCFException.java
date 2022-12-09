@@ -5,3 +5,4 @@ public class FJCFException extends Throwable {
         super("Funcionario já cadastrado!");
     }
 }
+/*Exceptions*/
