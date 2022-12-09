@@ -1,6 +1,7 @@
 package pedido;
 
 import db.RepositorioPedidos;
+import exceptions.PDDExcepition;
 
 public class CadastroPedido {
 
@@ -10,8 +11,9 @@ public class CadastroPedido {
         this.pedidos = pedidos;
     }
 
-    public void cadastrar(Pedido pedido){
-        if(pedidos.existe(pedido.getId())){
+    public void cadastrar(Pedido pedido) throws PDDExcepition {
+        if(pedidos.buscar(pedido.getId())){
+            throw new PDDExcepition();
 
         }else{
             pedidos.cadastrar(pedido);

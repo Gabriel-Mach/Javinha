@@ -1,6 +1,5 @@
 package db;
 
-import cliente.Cliente;
 import pedido.Pedido;
 
 public class RepositorioPedidosVetor implements RepositorioPedidos{
@@ -12,22 +11,14 @@ public class RepositorioPedidosVetor implements RepositorioPedidos{
 
     @Override
     public void cadastrar(Pedido pedido) {
-        if (this.comanda[0] == null){
-                this.comanda[0] = pedido;
-
-        }else {
-            for (int i = 0; i <comanda.length;i++){
-                if (this.comanda[i] == null){
-                        this.comanda[i] = pedido;
-                        break;
-
-                }
+        for (int i = 0; i < comanda.length; i++){
+            if(comanda[i]== null){
+                comanda[i] = pedido;
+                break;
             }
         }
 
     }
-
-
 
     @Override
     public void atualizar(int id, Pedido pedido) {
@@ -40,7 +31,17 @@ public class RepositorioPedidosVetor implements RepositorioPedidos{
     }
 
     @Override
-    public Pedido buscar(int id) {
-        return null;
+    public boolean buscar(int id) {
+        /*boolean resp = false;
+        for (int i = 0; i<comanda.length; i++){
+            if (comanda[i] != null && comanda[i].getId()) {
+                resp = true;
+                break;
+            }
+
+        }
+        return resp;
+        */
+        return false;
     }
 }

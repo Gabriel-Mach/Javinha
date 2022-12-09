@@ -8,7 +8,8 @@ public class RespositorioPratoVetor implements RepositorioPrato{
     public RespositorioPratoVetor(int t) {
         this.insumos = new Prato[t];
     }
-    public void card(){
+
+    public void carda() {
         System.out.println("Prato      Valor");
         for (int i = 0; i <insumos.length; i++){
             System.out.println(insumos[i].getNomePrato()+"    R$:"+insumos[i].getPreco());
@@ -18,20 +19,13 @@ public class RespositorioPratoVetor implements RepositorioPrato{
 
     @Override
     public void cadastrar(Prato pratos) {
-        if (this.insumos[0] == null){
-                this.insumos[0] = pratos;
-
-        }else {
-                for (int i = 0; i <insumos.length;i++){
-                    if (this.insumos[i] == null){
-                        this.insumos[i] = pratos;
-                        break;
-
-                    }
-                }
+        for (int i = 0; i < insumos.length; i++){
+            if(insumos[i]== null){
+                insumos[i] = pratos;
+                break;
             }
-
         }
+    }
 
 
 
@@ -46,7 +40,13 @@ public class RespositorioPratoVetor implements RepositorioPrato{
     }
 
     @Override
-    public Prato buscar(String nomePrato) {
-        return null;
+    public boolean buscar(String nomePrato) {
+        boolean result = false;
+        for (int i = 0; i <insumos.length; i++){
+            if(insumos[i]!=null && insumos[i].getNomePrato().equals(nomePrato)){
+                result = true;
+            }
+        }
+        return result;
     }
 }

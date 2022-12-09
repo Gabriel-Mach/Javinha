@@ -1,26 +1,25 @@
 package db;
 
 import cliente.Cliente;
-import pedido.Pedido;
 
 public class RepositorioClienteVetor implements RepositorioCliente{
-    Cliente[] client;
+    Cliente[] client = new Cliente[10];
 
     public RepositorioClienteVetor(int t) {
         this.client = new Cliente[t];
     }
     @Override
     public void cadastrar(Cliente cliente) {
-        if (this.client[0] == null){
-            this.client[0] = cliente;
-
-        }else {
-            for (int i = 0; i <client.length;i++){
-                if (this.client[i] == null){
-                    this.client[i] = cliente;
-                    break;
-
-                }
+        for (int i = 0; i < client.length; i++){
+            if(client[i]== null){
+                client[i] = cliente;
+                break;
+            }
+        }
+        for (int e = 0; e < client.length; e++){
+            if(client[e]!=null){
+                System.out.println("Nome: "+client[e].getNome());
+                System.out.println("CPF: "+client[e].getCpf());
             }
         }
 
@@ -37,7 +36,17 @@ public class RepositorioClienteVetor implements RepositorioCliente{
     }
 
     @Override
-    public Cliente buscar(String cpf) {
-        return null;
+    public boolean buscar(String cpf) {
+        boolean resp = false;
+
+        for (int i = 0; i < client.length; i++) {
+            if (client[i] != null && client[i].getCpf().equals(cpf)) {
+                resp = true;
+                break;
+            }
+
+        }
+        return resp;
+
     }
 }

@@ -1,9 +1,7 @@
 import cliente.CadastroCliente;
 import cliente.Cliente;
 import db.*;
-import exceptions.CJCException;
-import exceptions.CPFIExecption;
-import exceptions.FJCFException;
+import exceptions.*;
 import funcionario.CadastroFuncionario;
 import funcionario.Empregado;
 import pedido.CadastroPedido;
@@ -13,10 +11,11 @@ import pratos.Prato;
 
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
 import static java.lang.System.*;
 
 public class Main {
-    public static void main(String[] args) throws FJCFException, CPFIExecption, CJCException {
+    public static void main(String[] args) throws FJCFException, CPFIExecption, CJCException, PDDExcepition, PJCExcepition {
         //RepositorioPedidos rp = new RepositorioPedidosLista();
         RepositorioPedidos rp = new RepositorioPedidosVetor(100);
         CadastroPedido cad = new CadastroPedido(rp);
@@ -27,7 +26,7 @@ public class Main {
         RepositorioPrato pr = new RespositorioPratoVetor(100);
         CadastroPrato cadP = new CadastroPrato(pr);
 
-        RepositorioCliente cliL = new RepositorioClienteVetor(100);
+        RepositorioCliente cliL = new RepositorioClienteVetor(10);
         CadastroCliente cadCl = new CadastroCliente(cliL);
 
 
@@ -35,110 +34,130 @@ public class Main {
 
 
         out.println("Bem Vindo a Cafeteria Baby Reborn");
-        out.println("Você é:\n1- Cliente\n2- Funcionario");
-        String aux1 = s.nextLine();
-        int res = Integer.parseInt(aux1);
+        out.println("Você é:\n1- Cliente\n2- Funcionario\n3- Sair");
+        int r1 = s.nextInt();
 
-        int r1;
-        if (res == 1) {
-            out.println("1- Cardápio\n2- Seu Pedido\n 3- Sair");
-            String aux = s.nextLine();
-            r1 = Integer.parseInt(aux);
-            //r1 = s.nextInt();
-            while (r1 != 4) {
-                if (r1 == 1) {
-                    out.println(pr);
+        do {
+            switch (r1) {
+                case 1/* CLIENTE */:
+                    int rc;
+                    boolean rz = true;
 
-                } else if (r1 == 2) {
-                    String nmCl, clCPF, clEnd, numCl;
 
-                    out.println("Nome do Cliente:");
-                    nmCl = s.nextLine();
+                    do {
+                        out.println("1- Cardápio\n2- Seu Pedido\n 3- Sair");
+                        String a1 = s.next();
+                        rc = Integer.parseInt(a1);
+                        switch (rc){
+                            case 1/*CARDAPIO*/:
+                                pr.carda();
+                                break;
+                            case 2/*SEU PEDIDO*/:
+                                String nmCl, clCPF, clEnd, numCl;
+                                out.print("Nome do Cliente:");
+                                nmCl = s.nextLine();
 
-                    out.println("CPF:");
-                    clCPF = s.nextLine();
+                                out.println("CPF:");
+                                clCPF = s.nextLine();
 
-                    out.println("Endereço:");
-                    clEnd = s.nextLine();
+                                out.println("Endereço:");
+                                clEnd = s.nextLine();
 
-                    out.println("Numero:");
-                    numCl = s.nextLine();
+                                out.println("Numero:");
+                                numCl = s.nextLine();
 
-                    Cliente cli = new Cliente(clCPF, nmCl, clEnd, numCl);
+                                Cliente cli = new Cliente(clCPF, nmCl, clEnd, numCl);
 
-                    cadCl.cadastrar(cli);
+                                cadCl.cadastrar(cli);
 
-                    out.println("Pedido do Cliente");
-                    String com = s.nextLine();
+                                Pedido p1 = new Pedido(cli);
+                                out.println("Seu Pedido");
+                                String com = s.nextLine();
 
-                    while (!com.equals("SAIR")) {
-                        out.println("Mais um pedido?\n Se sim escolha\n se não, escreva SAIR");
-                        com = s.nextLine();
+                                p1.setItensPedido(com);
+                                int rt = 0;
+                                boolean ca = true;
+                                while (ca) {
+                                    out.println("Mais um pedido?\n Se sim escolha\n se não, escreva sair");
+                                    com = s.nextLine();
 
+                                    if (!com.equals("sair")){
+                                        p1.setItensPedido(com);
+
+                                    }else {
+                                        ca = false;
+                                        cad.cadastrar(p1);
+                                        break;
+                                    }
+
+                                }
+                                break;
+                            case 3:
+                                out.println("vc saiu");
+                                rz = false;
+                                break;
+                            default:
+                                out.println("Opção Errada");
+                                break;
+                        }
+
+
+
+                    }while(rz);
+
+
+                    break;
+                case 2/*FUNCIONARIO*/:
+                    out.println("1- Cadasdrar novo Funcionário\n2- Cadastrar novo Prato\n3- Sair");
+                    int r3 = s.nextInt();
+                    switch (r3){
+                        case 1/*CADASTRAR FUNCIONARIO*/:
+                            out.println("Nome Funcionário:");
+                            String nmF = s.nextLine();
+
+                            out.println("CPF Funcionário:");
+                            String cpfF = s.nextLine();
+
+                            out.println("Endereço do Funcionário");
+                            String endF = s.nextLine();
+
+                            out.println("Função do Empregado:");
+                            String funF = s.nextLine();
+
+                            Empregado e1 = new Empregado(cpfF, nmF, endF, funF);
+                            cadF.cadastrar(e1);
+                            break;
+                        case 2 /* CADASTRAR PRATO */:
+                            out.println("Nome do Prato:");
+                            String nmp = s.nextLine();
+
+                            out.println("Preço do Prato:");
+                            double prp = s.nextDouble();
+
+                            Prato p1 = new Prato(nmp, prp);
+                            cadP.cadastrar(p1);
+                            break;
+
+                        default:
+                            out.println("Você Saiu");
                     }
 
-                    Pedido p1 = new Pedido(cli);
+                    break;
+                case 3:
+                    out.println("Você Saiu!");
+                    r1= 3;
+                    break;
 
-                    cad.cadastrar(p1);
-
-
-                } else {
-                    out.println("Opção Inválida");
-                }
-                out.println("1- Cardápio\n2- Seu Pedido\n4- Sair");
-                r1 = s.nextInt();
 
             }
+            out.println("Você é:\n1- Cliente\n2- Funcionario\n3- Sair");
+            r1 = s.nextInt();
+        }while (r1!=3);
 
-        } else if (res == 2) {
-            int r2;
-            out.println("1- Cadasdrar novo Funcionário\n2- Cadastrar novo Prato\n3- Sair");
-            String aux2 = s.nextLine();
-            r2 = Integer.parseInt(aux2);
-
-            while (r2 != 3) {
-                if (r2 == 1) {
-                    out.println("Nome Funcionário:");
-                    String nmF = s.nextLine();
-
-                    out.println("CPF Funcionário:");
-                    String cpfF = s.nextLine();
-
-                    out.println("Endereço do Funcionário");
-                    String endF = s.nextLine();
-
-                    out.println("Função do Empregado:");
-                    String funF = s.nextLine();
-
-                    Empregado e1 = new Empregado(cpfF, nmF, endF, funF);
-                    cadF.cadastrar(e1);
-
-                } else if (r2 == 2) {
-                    out.println("Nome do Prato:");
-                    String nmp = s.nextLine();
-
-                    out.println("Preço do Prato:");
-                    double prp = s.nextDouble();
-
-                    Prato p1 = new Prato(nmp, prp);
-                    cadP.cadastrar(p1);
+    }
+}
 
 
-                } else {
-                    out.println("Opção Inválida");
-
-                }
-                out.println("1- Cadasdrar novo Funcionário\n2- Cadastrar novo Prato\n3- Sair");
-                aux2 = s.nextLine();
-                r2 = Integer.parseInt(aux2);
-
-            }
-            out.println("1- Cardápio\n2- Seu Pedido\n 3- Sair");
-            String aux = s.nextLine();
-            r1 = Integer.parseInt(aux);
-
-
-        }
 
 
         //conta.setId(1);
@@ -147,5 +166,5 @@ public class Main {
 //Uso do "Set" para inserir um valor quando a classe for privado//
 //Uso do "Get" para inserir um valor quando a classe for privado/
 
-    }
-}
+
+

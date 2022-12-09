@@ -2,10 +2,13 @@ package db;
 
 import pratos.Prato;
 
-import java.util.ArrayList;
-
 public class RepositorioPratoLista implements RepositorioPrato{
     Prato inicio;
+
+    @Override
+    public void carda() {
+
+    }
 
     public RepositorioPratoLista() {
     }
@@ -33,8 +36,8 @@ public class RepositorioPratoLista implements RepositorioPrato{
     }
 
     @Override
-    public Prato buscar(String nomePrato) {
-        return null;
+    public boolean buscar(String nomePrato) {
+        return false;
     }
 
     public void cardapio(){

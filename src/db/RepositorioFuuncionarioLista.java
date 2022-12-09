@@ -19,7 +19,7 @@ public class RepositorioFuuncionarioLista implements RepositorioFuncionario {
     }
 
     @Override
-    public Empregado buscar(String cpf) {
-        return null;
+    public boolean buscar(String cpf) {
+        return false;
     }
 }

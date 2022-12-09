@@ -11,6 +11,7 @@ public class Prato {
     }
 
     public Prato() {
+
     }
 
     public String getNomePrato() { return nomePrato; }

@@ -2,7 +2,7 @@ package db;
 
 import cliente.Cliente;
 
-public class RepositorioClienteLista implements RepositorioCliente{
+public class  RepositorioClienteLista implements RepositorioCliente{
     @Override
     public void cadastrar(Cliente cliente) {
 
@@ -18,7 +18,7 @@ public class RepositorioClienteLista implements RepositorioCliente{
     }
 
     @Override
-    public Cliente buscar(String cpf) {
-        return null;
+    public boolean buscar(String cpf) {
+        return false;
     }
 }
